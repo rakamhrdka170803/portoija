@@ -6,16 +6,16 @@ const Experience = () => {
     <section id="pengalaman" className="relative py-16 lg:py-24 overflow-visible bg-[#060312]/70">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
+        {/* Section Header tanpa tulisan bagian */}
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/70 border border-purple-500/30 text-xs font-semibold text-purple-300 mb-3">
             <Briefcase className="w-3.5 h-3.5 text-cyan-400" />
-            <span>BAGIAN 2</span>
+            <span>KARIER PROFESIONAL</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white tracking-tight">
-            Pengalaman Kerja
+          <h2 className="text-3xl sm:text-5xl font-heading font-black text-white tracking-tight">
+            Pengalaman <span className="text-gradient-galaxy">Kerja</span>
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-slate-300">
+          <p className="mt-3 text-sm sm:text-base text-slate-300">
             Rekam jejak pengalaman kerja nyata dari CV dan Portofolio.
           </p>
         </div>

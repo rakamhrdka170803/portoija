@@ -1,26 +1,26 @@
 import React from 'react';
-import { Users, Crown, Shield, Calendar, Award } from 'lucide-react';
+import { Users, Crown, Shield, Award } from 'lucide-react';
 
 const Organization = () => {
   return (
     <section id="organisasi" className="relative py-16 lg:py-24 overflow-visible">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
+        {/* Section Header tanpa tulisan bagian */}
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/70 border border-purple-500/30 text-xs font-semibold text-purple-300 mb-3">
             <Users className="w-3.5 h-3.5 text-cyan-400" />
-            <span>BAGIAN 1</span>
+            <span>KEPEMIMPINAN & ORGANISASI</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white tracking-tight">
-            Organisasi & Volunteering
+          <h2 className="text-3xl sm:text-5xl font-heading font-black text-white tracking-tight">
+            Organisasi & <span className="text-gradient-galaxy">Volunteering</span>
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-slate-300">
+          <p className="mt-3 text-sm sm:text-base text-slate-300">
             Riwayat kepemimpinan, kepanitiaan, dan kontribusi organisasi kemahasiswaan di Universitas Islam Bandung.
           </p>
         </div>
 
-        {/* 3 Main Experience Highlights from Porto & CV */}
+        {/* 3 Main Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           
           {/* Card 1: Fakansi Fikom */}
