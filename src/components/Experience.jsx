@@ -1,146 +1,164 @@
 import React from 'react';
-import { Briefcase, Calendar, MapPin, CheckCircle, Sparkles, Building2, Layers } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
 
 const Experience = () => {
-  const experiences = [
-    {
-      title: 'Project In Charge (PIC) & Pengelolaan Lapangan',
-      company: 'Vendor Event (Freelance)',
-      period: '2022 - Sekarang',
-      location: 'Bandung & Skala Nasional',
-      badge: 'Posisi Utama',
-      badgeColor: 'border-cyan-500/40 text-cyan-300 bg-cyan-950/60',
-      description:
-        'Memimpin operasional panggung, vendor logistik, dan area tenant di berbagai perhelatan akbar mulai dari konser band nasional papan atas hingga turnamen resmi berskala nasional.',
-      responsibilities: [
-        {
-          heading: 'PIC & Manajemen Lapangan',
-          detail:
-            'Bertanggung jawab penuh atas pengukuran venue, pembuatan layout, penyusunan estimasi waktu pengerjaan, serta pengontrolan area booth dan operasional acara skala regional hingga nasional (MPL Season 14, Pocari Sweat, Ardan Senja Syahdu, Dewa All Stars).',
-        },
-        {
-          heading: 'Manajemen Klien & Komunikasi Strategis',
-          detail:
-            'Menjadi jembatan komunikasi utama antara pihak Event Organizer (EO), vendor, dan jajaran manajemen artis/bintang tamu nasional (seperti pada acara SMKN 2 Garut bersama Dewa 19).',
-        },
-        {
-          heading: 'Administrasi, Finansial & Keputusan Cepat',
-          detail:
-            'Mengelola pembuatan invoice, mengkoordinasikan kru/karyawan di lapangan, serta mengambil keputusan cepat dan taktis untuk kelancaran operasional acara di segala situasi.',
-        },
-      ],
-    },
-    {
-      title: 'Magang – Desainer Grafis',
-      company: 'PT Media Bewara West Java Today',
-      period: '2024',
-      location: 'Jawa Barat',
-      badge: 'Creative & Media',
-      badgeColor: 'border-purple-500/40 text-purple-300 bg-purple-950/60',
-      description:
-        'Mengembangkan aset visual dan identitas media berita daring, mengintegrasikan komunikasi visual yang komunikatif dan menarik bagi pembaca umum.',
-      responsibilities: [
-        {
-          heading: 'Materi Desain Publikasi',
-          detail:
-            'Membuat berbagai materi desain grafis dinamis untuk kebutuhan publikasi media daring dan media sosial perusahaan.',
-        },
-        {
-          heading: 'Pengembangan Branding Visual',
-          detail:
-            'Mendukung perancangan dan konsistensi branding visual perusahaan demi memperkuat kredibilitas media.',
-        },
-        {
-          heading: 'Riset Media & Berita Terkini',
-          detail:
-            'Melakukan pemantauan dan riset berita harian untuk menghasilkan infografis serta visual pelengkap berita yang akurat.',
-        },
-      ],
-    },
-  ];
-
   return (
-    <section id="pengalaman" className="relative py-20 lg:py-28 overflow-hidden">
+    <section id="pengalaman" className="relative py-16 lg:py-24 overflow-visible bg-[#060312]/70">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs font-semibold text-purple-300 mb-3">
-            <Briefcase className="w-3.5 h-3.5" />
-            <span>KARIER PROFESIONAL</span>
+        <div className="mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/70 border border-purple-500/30 text-xs font-semibold text-purple-300 mb-3">
+            <Briefcase className="w-3.5 h-3.5 text-cyan-400" />
+            <span>BAGIAN 2</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-white tracking-tight">
-            Pengalaman <span className="text-gradient-galaxy">Kerja Nyata</span>
+          <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white tracking-tight">
+            Pengalaman Kerja
           </h2>
-          <p className="mt-3 text-slate-300 text-sm sm:text-base">
-            Rekam jejak profesional dalam mengelola kepemimpinan lapangan dan desain grafis media terkemuka.
+          <p className="mt-2 text-sm sm:text-base text-slate-300">
+            Rekam jejak pengalaman kerja nyata dari CV dan Portofolio.
           </p>
         </div>
 
-        {/* Timeline Stack */}
-        <div className="space-y-8 relative">
+        {/* Stack Pengalaman Kerja Utama */}
+        <div className="space-y-8">
           
-          {/* Vertical Connecting Line */}
-          <div className="hidden md:block absolute left-8 top-10 bottom-10 w-0.5 bg-gradient-to-b from-purple-500 via-cyan-400 to-indigo-600 opacity-30" />
-
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="relative p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-[#12082e]/90 via-[#0e0624]/90 to-[#070314]/90 border border-purple-500/20 hover:border-purple-400/50 shadow-xl backdrop-blur-xl transition-all duration-300 group"
-            >
-              {/* Header inside card */}
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-purple-900/30">
-                <div>
-                  <div className="flex flex-wrap items-center gap-2 mb-2">
-                    <span className={`text-xs font-bold px-3 py-1 rounded-lg border ${exp.badgeColor}`}>
-                      {exp.badge}
-                    </span>
-                    <span className="text-xs font-medium text-purple-300 flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5" /> {exp.period}
-                    </span>
-                  </div>
-                  <h3 className="text-2xl font-heading font-black text-white group-hover:text-purple-300 transition-colors">
-                    {exp.title}
-                  </h3>
-                  <div className="flex items-center gap-2 text-sm text-slate-300 mt-1">
-                    <Building2 className="w-4 h-4 text-cyan-400" />
-                    <span className="font-semibold text-white">{exp.company}</span>
-                    <span className="text-purple-500">•</span>
-                    <span className="text-slate-400">{exp.location}</span>
-                  </div>
-                </div>
-
-                <div className="hidden lg:flex items-center justify-center w-14 h-14 rounded-2xl bg-purple-900/30 border border-purple-500/30 text-purple-300">
-                  <Briefcase className="w-7 h-7 text-cyan-300" />
-                </div>
+          {/* Card 1: Vendor Event (Freelance) | 2022 - Sekarang */}
+          <div className="p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-[#140a36]/90 via-[#0e0624]/90 to-[#070314]/90 border border-purple-500/30 shadow-xl backdrop-blur-xl">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-purple-900/40">
+              <div>
+                <span className="text-xs font-bold px-2.5 py-1 rounded-md bg-cyan-950 text-cyan-300 border border-cyan-500/30">
+                  Freelance
+                </span>
+                <h3 className="text-xl sm:text-2xl font-heading font-black text-white mt-2">
+                  Vendor Event (Freelance)
+                </h3>
               </div>
-
-              {/* Summary Description */}
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed my-5">
-                {exp.description}
-              </p>
-
-              {/* Responsibilities list */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                {exp.responsibilities.map((resp, rIdx) => (
-                  <div
-                    key={rIdx}
-                    className="p-4 rounded-2xl bg-[#160a36]/60 border border-purple-500/15 flex flex-col justify-between"
-                  >
-                    <div>
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-cyan-300 mb-2 flex items-center gap-2">
-                        <CheckCircle className="w-3.5 h-3.5 text-purple-400" />
-                        {resp.heading}
-                      </h4>
-                      <p className="text-xs text-slate-300 leading-relaxed">
-                        {resp.detail}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+              <div className="text-xs sm:text-sm font-semibold text-purple-300 flex items-center gap-1.5 self-start sm:self-auto">
+                <Calendar className="w-4 h-4 text-cyan-400" />
+                <span>2022 - Sekarang</span>
               </div>
             </div>
-          ))}
+
+            {/* 3 Tanggung Jawab Nyata */}
+            <div className="space-y-4 mt-6">
+              
+              <div className="p-4 rounded-2xl bg-[#190c42]/60 border border-purple-500/20">
+                <h4 className="text-sm font-bold text-cyan-300 mb-1.5 flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
+                  Project In Charge (PIC) & Pengelolaan Lapangan
+                </h4>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed pl-6">
+                  Bertanggung jawab penuh atas pengukuran venue, pembuatan layout, penyusunan estimasi waktu pengerjaan, serta pengontrolan area booth dan operasional acara skala regional hingga nasional (seperti MPL Season 14, Pocari, Ardan Senja Syahdu, dan Dewa All Stars).
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-[#190c42]/60 border border-purple-500/20">
+                <h4 className="text-sm font-bold text-purple-300 mb-1.5 flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0" />
+                  Manajemen Klien & Komunikasi Strategis
+                </h4>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed pl-6">
+                  Menjadi jembatan komunikasi utama antara pihak Event Organizer (EO), vendor, dan manajemen artis/bintang tamu (seperti pada acara SMKN 2 Garut bersama Dewa 19).
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-[#190c42]/60 border border-purple-500/20">
+                <h4 className="text-sm font-bold text-pink-300 mb-1.5 flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-pink-400 shrink-0" />
+                  Administrasi & Keuangan
+                </h4>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed pl-6">
+                  Mengelola pembuatan invoice, mengkoordinasikan kru/karyawan di lapangan, serta mengambil keputusan cepat untuk kelancaran operasional acara.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Card 2: PT Media Bewara West Java Today / 2024 */}
+          <div className="p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-[#140a36]/90 via-[#0e0624]/90 to-[#070314]/90 border border-purple-500/30 shadow-xl backdrop-blur-xl">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-purple-900/40">
+              <div>
+                <span className="text-xs font-bold px-2.5 py-1 rounded-md bg-purple-950 text-purple-300 border border-purple-500/30">
+                  Magang
+                </span>
+                <h3 className="text-xl sm:text-2xl font-heading font-black text-white mt-2">
+                  PT Media Bewara West Java Today
+                </h3>
+                <p className="text-xs sm:text-sm font-semibold text-cyan-300 mt-0.5">
+                  Magang – Desainer Grafis
+                </p>
+              </div>
+              <div className="text-xs sm:text-sm font-semibold text-purple-300 flex items-center gap-1.5 self-start sm:self-auto">
+                <Calendar className="w-4 h-4 text-cyan-400" />
+                <span>2024</span>
+              </div>
+            </div>
+
+            <div className="mt-5 space-y-2.5">
+              <div className="flex items-start gap-3 p-3 rounded-xl bg-[#190c42]/40 border border-purple-500/15 text-xs sm:text-sm text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
+                <span>Membuat materi desain grafis untuk berbagai kebutuhan publikasi media.</span>
+              </div>
+              <div className="flex items-start gap-3 p-3 rounded-xl bg-[#190c42]/40 border border-purple-500/15 text-xs sm:text-sm text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
+                <span>Mendukung pengembangan branding visual perusahaan.</span>
+              </div>
+              <div className="flex items-start gap-3 p-3 rounded-xl bg-[#190c42]/40 border border-purple-500/15 text-xs sm:text-sm text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
+                <span>Melakukan pemantauan dan riset berita harian.</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3: Pengalaman Kerja Tambahan dari Dokumen Portofolio */}
+          <div className="p-7 sm:p-8 rounded-3xl bg-[#0c061e]/90 border border-purple-500/20 backdrop-blur-md">
+            <h4 className="text-base font-heading font-bold text-white mb-4 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-cyan-400" />
+              Pengalaman Operasional & Lapangan (Dokumen Portofolio)
+            </h4>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              
+              <div className="p-4 rounded-2xl bg-[#140a33]/80 border border-purple-500/15 flex flex-col justify-between">
+                <div>
+                  <span className="text-[11px] font-bold text-cyan-300 block mb-1">Dokumentasi & Media</span>
+                  <h5 className="font-bold text-white text-sm mb-2">
+                    Ganes Soundsystem (HUT Polri & Inaugurasi UNJANI)
+                  </h5>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Mendokumentasikan perangkat dan menyunting konten visual untuk media sosial.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-[#140a33]/80 border border-purple-500/15 flex flex-col justify-between">
+                <div>
+                  <span className="text-[11px] font-bold text-amber-300 block mb-1">2023 • PIC Area Booth</span>
+                  <h5 className="font-bold text-white text-sm mb-2">
+                    Dewa All Stars & Sehari Bersama Djarum Coklat
+                  </h5>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    PIC Area Booth Tenant FNB: Mengontrol area, estimasi bongkar-pasang tenda, dan manajemen invoice.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-[#140a33]/80 border border-purple-500/15 flex flex-col justify-between">
+                <div>
+                  <span className="text-[11px] font-bold text-purple-300 block mb-1">2025 • Vendor Instalasi</span>
+                  <h5 className="font-bold text-white text-sm mb-2">
+                    Ardan Senja Syahdu Vol. 6 & Coklat Kita Silaturahmi
+                  </h5>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Vendor Instalasi & Pengambilan Keputusan Operasional — Berkoordinasi dengan EO dan memastikan kesiapan area venue.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
 
         </div>
 
